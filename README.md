@@ -14,7 +14,7 @@ CDS6324 Data Visualization (Trimester March/April 2025 - Term 2510)
     <img src='images/dashboard_behavioral_analysis.png'>
   </p>
   <p align='center'>
-    <strong>View the Interactive Dashboard</strong>
+    View <strong>Interactive Dashboard</strong> on
   </p>
   <p align='center'>
     <a href='https://kaijun05.github.io/hotel-cancellations-dashboard/'>
