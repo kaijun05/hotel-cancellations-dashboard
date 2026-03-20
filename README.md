@@ -7,6 +7,20 @@ CDS6324 Data Visualization (Trimester March/April 2025 - Term 2510)
   <p>
     Hotel cancellations represent a significant revenue leak in the hospitality industry. This project presents a high-performance, interactive <strong>D3.js dashboard</strong> that analyzes a dataset of <strong>119,390 bookings</strong> to uncover behavioral patterns. Unlike static reports, this tool allows users to perform multi-dimensional analysis across different timeframes and geographical locations.
   </p>
+  <p align='center'>
+    <img src='images/dashboard_overview_trends.png'>
+  </p>
+  <p align='center'>
+    <img src='images/dashboard_behavioral_analysis.png'>
+  </p>
+  <p align='center'>
+    <strong>View the Interactive Dashboard</strong>
+  </p>
+  <p align='center'>
+    <a href='https://kaijun05.github.io/hotel-cancellations-dashboard/'>
+      <img src='https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white'>
+    </a>
+  </p>
 </div>
 
 <h2>Dataset</h2>
