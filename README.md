@@ -9,6 +9,16 @@ CDS6324 Data Visualization (Trimester March/April 2025 - Term 2510)
   </p>
 </div>
 
+<h2>Dataset</h2>
+<div align='justify'>
+  <p>
+    The <strong>“Hotel Booking Demand Dataset”</strong> comprises a total of <strong>119,390 records</strong> from bookings made at a <strong>resort hotel (40,060 records)</strong> and a <strong>city hotel (79,330 records)</strong> collected between <strong>July 1st, 2015</strong> and <strong>August 31st, 2017</strong>. It consists of <strong>32</strong> features related to guest bookings. These features cover a wide range of crucial variables including cancellation status, lead time, arrival date details (year, month, week number), length of stay (weekdays and weekends), and type of hotel. The use of this extensive data set allows us to perform a comprehensive analysis of hotel booking behavior, including trends in cancellations, seasonal patterns, and differences between hotel types. Additionally, we can gain insights from our dashboard into how certain factors such as booking lead time, customer type, and stay duration may influence the likelihood of a booking being canceled.
+  </p>
+  <p>
+    The data is sourced from <a href='https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand'>Kaggle</a>.
+  </p>
+</div>
+
 <h2>Project Structure</h2>
 
 ```
@@ -56,7 +66,7 @@ CDS6324-Project/
   </ul>
 </div>
 
-<h2>Data Engineering & Tech Stack</h2>
+<h2>Methodology</h2>
 <div align='justify'>
   <ul>
     <li>
