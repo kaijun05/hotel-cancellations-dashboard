@@ -138,14 +138,30 @@ CDS6324-Project/
 </div>
   
 <h2>Installation & Requirements</h2>
+<div align='justify'>
+  <p>
+    Before running the project locally, make sure you have installed the following:
+  </p>
+  <ul>
+    <li>
+      <strong>A Modern Web Browser (e.g., Google Chrome, Mozilla Firefox)</strong>
+    </li>
+    <li>
+      <strong>Python 3.13+</strong> or <strong>VS Code "Live Server" Extension</strong>
+    </li>
+  </ul>
+</div>
 
-1. Open your terminal
-2. Navigate to the project directory:
-
-- cd path/to/Project 
-
-3. Run a simple HTTP server:
+1. In your terminal, clone the repository by typing:
+```bash
+git clone https://github.com/kaijun05/hotel-cancellations-dashboard
+cd hotel-cancellations-dashboard
+```
+2. Start a local server (D3.js requires a server to load data files):
+```bash
 python -m http.server 8000
-
-4. Open your browser and visit:
-- http://localhost:8000/index.html
+```
+3. Open your browser and visit:
+```bash
+http://localhost:8000/index.html
+```
