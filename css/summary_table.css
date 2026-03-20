@@ -1,0 +1,85 @@
+/* ============ Scrollable Table Container ============ */
+#summary-table {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* The inner scroll container */
+.summary-scroll-container {
+  max-height: calc(400px - 64px); 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling*/
+.summary-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.summary-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+/* Sticky table header */
+.summary-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f8f9fa;
+}
+
+/* ============ Table Styles ============ */
+.summary-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  background: #fff;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #e9ecef;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.summary-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* ============ Row Hover + Stripe ============ */
+.summary-table tr:nth-child(even) {
+  background-color: #fbfcfd;
+}
+
+.summary-table tr:hover {
+  background-color: #f1f3f4;
+  transition: background-color 0.15s ease;
+}
+
+/* ============ Column Styling ============ */
+.summary-table td:nth-child(2),
+.summary-table td:nth-child(3) {
+  text-align: center;
+  font-weight: 500;
+}
+
+.summary-table th:nth-child(1),
+.summary-table td:nth-child(1) { width: 45%; }
+.summary-table th:nth-child(2),
+.summary-table td:nth-child(2) { width: 25%; }
+.summary-table th:nth-child(3),
+.summary-table td:nth-child(3) { width: 30%; }

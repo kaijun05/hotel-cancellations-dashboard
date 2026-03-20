@@ -1,0 +1,105 @@
+/* Hotel Type Cancellation Container and Chart */
+.small-card {
+    height: 100%;
+    max-height: 400px; /* Ensure minimum height for proper centering */
+}
+
+.small-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 250px; /* Minimum height for the card body */
+}
+
+.small-card #hotel-type-cancellation-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.small-card #hotel-type-cancellation-bubble svg {
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+}
+
+/* Bubble Styles With Hover Effects */
+.small-card .bubble {
+    cursor: pointer;
+}
+
+.bubble circle:hover {
+    stroke: #2c3e50;
+    stroke-width: 3px;
+    filter: brightness(1.1);
+}
+
+.small-card .bubble-text {
+    font-size: 16px;
+    font-weight: 700;
+    fill: white;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.bubble-subtext {
+    font-size: 11px;
+    font-weight: 600;
+    fill: rgba(255, 255, 255, 0.95);
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    max-width: 280px;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.tooltip-item {
+    margin: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tooltip-label {
+    margin-right: 12px;
+    color: #bdc3c7;
+}
+
+.tooltip-value {
+    font-weight: bold;
+    color: #fff;
+}
+

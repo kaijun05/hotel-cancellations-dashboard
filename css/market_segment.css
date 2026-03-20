@@ -1,0 +1,53 @@
+#market-segment-chart {
+  width: 100%;
+  height: 450px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#market-segment-chart svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Axis styles */
+#market-segment-chart .tick text {
+  font-size: 11px;
+  fill: #666;
+  font-weight: 500;
+}
+
+#market-segment-chart .domain,
+#market-segment-chart .tick line {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 1px;
+}
+
+/* Axis label styles */
+#market-segment-chart text {
+  font-size: 12px;
+  font-weight: 600;
+  fill: #444;
+}
+
+/* Sort button styles */
+#market-segment-chart button {
+  transition: all 0.2s ease;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+#market-segment-chart button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#market-segment-chart button:active {
+  transform: translateY(0);
+}

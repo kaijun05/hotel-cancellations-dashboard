@@ -1,0 +1,126 @@
+/* =================================================================== */
+/* MONTHLY LINE CHART STYLES                                          */
+/* =================================================================== */
+
+/* Chart Container Layout */
+#monthly-cancellation-chart.card-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+#monthly-cancellation-chart {
+    width: 100% !important;
+    height: 400px !important;
+    padding: 0 !important;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#monthly-cancellation-chart svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: none !important; /* remove translateX */
+}
+
+/* Grid layout adjustments for line card */
+.line-card {
+    min-height: 400px; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+}
+
+.line-card .card-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header + #monthly-cancellation-chart {
+    margin-top: 40px;
+}
+
+/* =================================================================== */
+/* SVG AND CHART ELEMENTS                                             */
+/* =================================================================== */
+
+/* SVG Container */
+.monthly-cancellation-svg {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 600px;
+}
+
+/* Axes Styling */
+.monthly-x-axis, 
+.monthly-y-axis {
+    font-size: 12px;
+    color: #666;
+}
+
+.monthly-x-axis-label, 
+.monthly-y-axis-label {
+    font-size: 14px;
+    font-weight: bold;
+    fill: #333;
+}
+
+/* Line Chart Elements */
+.monthly-cancellation-line {
+    fill: none;
+    stroke-width: 3;
+}
+
+.monthly-cancellation-dot {
+    r: 4;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.monthly-cancellation-hover {
+    r: 10;
+    fill: transparent;
+    cursor: pointer;
+}
+
+/* Tooltip Styling */
+.monthly-cancellation-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    max-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Legend Styling */
+.monthly-cancellation-legend-rect {
+    stroke: none;
+    stroke-width: 0;
+    rx: 0;
+    ry: 0;
+}
+
+.monthly-cancellation-legend-text {
+    text-anchor: start;
+    font-size: 12px;
+    font-weight: 600;
+    fill: #333;
+}

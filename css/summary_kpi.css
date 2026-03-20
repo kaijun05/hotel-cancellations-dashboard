@@ -1,0 +1,51 @@
+.kpi-summary-bar,
+.kpi-summary-grid {
+    height: auto;
+}
+
+.kpi-summary-grid {
+    display: grid;
+    /* To ensure that the grid layout adapts responsively instead of overflowing */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+}
+
+.kpi-summary-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 6px 10px;
+    height: 54px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kpi-summary-item > div:first-child {
+    text-align: left;
+}
+
+.kpi-summary-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.1;
+}
+
+.kpi-summary-label {
+    font-size: 0.72rem;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.kpi-icon {
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

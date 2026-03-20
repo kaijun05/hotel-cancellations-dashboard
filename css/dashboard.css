@@ -1,0 +1,266 @@
+/* =================================================================== */
+/* MAIN DASHBOARD STYLESHEET                                           */
+/* =================================================================== */
+
+/* 1) Include padding/borders in all element sizes */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2) Full-height, no default scrollbars on the root */
+/* html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+/* 3) Turn the outer container into a column flex so header + wrapper stack */
+/* .min-vh-100 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+} */
+
+/* General Styles */
+.bg-gradient {
+    background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+}
+
+.fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.backdrop-blur { backdrop-filter: blur(4px); }
+.text-purple { color: #8b5cf6 !important; }
+
+/* Dashboard Layout */
+.bg-white.border-bottom {
+    /* header area stays its natural height */
+    flex: 0 0 auto;
+}
+
+.dashboard-wrapper {
+    /* wrapper fills rest of viewport */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
+.row.g-4 {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+/* Keep the KPI row pinned to the top of the wrapper */
+#summary-kpi {
+    flex: 0 0 auto;
+}
+
+/* Tabs + content container becomes a second flex column */
+.card-body.p-0.mt-3 {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Tab content fills available space */
+.tab-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* =================================================================== */
+/* OVERVIEW & TRENDS CSS-GRID LAYOUT                                    */
+/* =================================================================== */
+.overview-grid {
+    /* grid fills its container */
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-areas:
+      "map    booking  hoteltype  trends"
+      "line   heatmap  heatmap    heatmap";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:    auto auto;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* map/card positioning */
+.map-card       { grid-area: map; }
+.booking-card   { grid-area: booking; }
+.hoteltype-card { grid-area: hoteltype; }
+.trends-card    { grid-area: trends; }
+.line-card      { grid-area: line; }
+.heatmap-card   { grid-area: heatmap; }
+
+/* If any card content is too large, let it scroll internally */
+.overview-grid > .card {
+    overflow: auto;
+}
+
+/* Neutralize Bootstrap’s negative row margins */
+.dashboard-wrapper .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Tab Styles */
+.nav-tabs { 
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #64748b;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+.nav-tabs .nav-link.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white !important;
+    border: none;
+}
+
+/* Card Styles */
+.card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover,
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.kpi-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.small-card {
+    height: 400px;           
+    min-height: 200px;
+}
+
+.small-card .card-body {
+    height: calc(100% - 50px); /* Account for header height */
+    overflow: hidden;
+}
+
+/* Force charts to fill their card width and height */
+.dashboard-wrapper svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* =================================================================== */
+/* FULL PAGE FLEX LAYOUT (NO SCROLL)                                   */
+/* =================================================================== */
+/* 1) kill any browser scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 2) stack header + wrapper vertically */
+.min-vh-100 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 3) header stays its own height */
+.bg-white.border-bottom {
+  flex: 0 0 auto;
+}
+
+/* 4) wrapper eats the rest */
+.dashboard-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 0.5rem;
+}
+
+/* 5) KPI strip stays its own height */
+#summary-kpi {
+  flex: 0 0 auto;
+}
+
+/* 6) tabs container is fixed height */
+.card-body.p-0.mt-3 {
+  flex: 0 0 auto;
+}
+
+/* 7) tab-content fills remaining wrapper height */
+.tab-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 8) grid fills final space, two rows: map over line+heatmap */
+.overview-grid {
+    /* grid fills its container */
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-areas:
+      "map    booking  hoteltype  trends"
+      "line   heatmap  heatmap    heatmap";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:    auto auto;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* 9) position each card per your sketch */
+.map-card       { grid-area: map; }
+.booking-card   { grid-area: booking; }
+.hoteltype-card { grid-area: hoteltype; }
+.trends-card    { grid-area: trends; }
+.line-card      { grid-area: line; }
+.heatmap-card   { grid-area: heatmap; }
+
+/* 10) force charts to fill their entire card box */
+.dashboard-wrapper svg {
+  width: 100%  !important;
+  height: 100% !important;
+  display: block;
+}
+
+html, body {
+    overflow-x: hidden;  /* still no sideways scroll */
+    overflow-y: auto;    /* allow vertical scroll again */
+    height: auto;        /* unlock the 100vh clamp */
+  }
+  
+  .min-vh-100 {
+    overflow: visible !important;
+    height: auto         !important;
+  }
