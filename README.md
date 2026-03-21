@@ -189,3 +189,12 @@ python -m http.server 8000
 ```bash
 http://localhost:8000/index.html
 ```
+
+<h2>Contributors</h2>
+
+|   | Name                              |
+|--:|:-----------------------------------------:|
+| 1 | Looi Kai Jun |
+| 2 | Nur Afreen Junaidah binti Noorul Ameen |
+| 3 | Nik Syareena Aida binti Nik Ahmad Faizul |
+| 4 | Chin Jia Wen |
